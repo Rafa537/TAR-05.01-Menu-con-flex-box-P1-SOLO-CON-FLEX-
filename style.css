@@ -1,0 +1,99 @@
+body {
+    background-color: #222;
+    padding: 20px;
+}
+
+.caja {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #0d2b45; 
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid #555;
+}
+
+header {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 60px;
+    background-color: #ffcc00; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    border-radius: 10px;
+    flex-shrink: 0; 
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    flex-grow: 1; 
+}
+
+.nav-list {
+    display: flex;      
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;         
+}
+
+.nav-list li {
+    flex-grow: 1; /* Base: todos intentan crecer */
+    flex-shrink: 1; /* Base: todos se encogen si falta espacio */
+    height: 60px;
+}
+
+.nav-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #66b3ff; 
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    font-weight: bold;
+    white-space: nowrap; 
+}
+
+h2 {
+    color: white; 
+    text-align: center; 
+    margin-top: 20px;
+}
+
+/* --- TAMAÑOS (Flex-Basis) --- */
+.w-150 { flex-basis: 150px; }
+.w-200 { flex-basis: 200px; }
+.w-300 { flex-basis: 300px; }
+.w-320 { flex-basis: 320px; }
+.w-400 { flex-basis: 400px; }
+
+/* Grow 0: No crece más allá de su basis */
+.nav-list li.grow-0 { 
+    flex-grow: 0; 
+    background-color: #ff6666;
+}
+
+/* Grow 2: Crece el doble de rápido que los normales */
+.nav-list li.grow-2 { 
+    flex-grow: 2; 
+    background-color: #66ff66; 
+}
+
+/* No Shrink: No permite que se encoja menos de su basis */
+.nav-list li.no-shrink { 
+    flex-shrink: 0; 
+    border-color: #ffcc00; 
+}
